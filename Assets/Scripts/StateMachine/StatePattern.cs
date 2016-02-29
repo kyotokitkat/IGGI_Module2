@@ -8,8 +8,7 @@ public class StatePattern : MonoBehaviour
 {
     public SingletonAudio manager;
     public AudioClip clip;
-
-
+   
     [HideInInspector] public IState currentState;
 	[HideInInspector] public StopState stopState;
 	[HideInInspector] public ComposingState composingState;
@@ -19,7 +18,7 @@ public class StatePattern : MonoBehaviour
     private void Awake()
 	{
         manager = GameObject.Find("ManagerObj").GetComponent<SingletonAudio>();
-
+     
 		inspirationState = new InspirationState (this);
 		composingState = new ComposingState (this);
 		stopState = new StopState (this);
