@@ -23,9 +23,7 @@ public class StopState : IState
 
   
     public void ToInspirationState()
-    {
-
-        
+    {               
         bot.currentState = bot.inspirationState;
         Debug.Log("going to inspiration state");
     }

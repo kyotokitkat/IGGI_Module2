@@ -48,7 +48,7 @@ public class ComposingState : IState
     {       
        bool Heard;
 
-        if (Random.Range(0f, 1f) > 0.98 && bot.manager.History.Count <= 50)
+        if (Random.Range(0f, 1f) > 0.99 && bot.manager.History.Count <= 50)
 
      
         {
@@ -63,7 +63,7 @@ public class ComposingState : IState
             else
             {
                 Heard = false;
-             
+                
                 ToInspirationState();
             }
         }

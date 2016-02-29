@@ -13,7 +13,7 @@ public class InspirationState : IState
 		bot = statePattern;
 
     }
-    public GameObject bird;
+    static GameObject bird;
     public GameObject[] birds;
 
 
@@ -74,7 +74,7 @@ public class InspirationState : IState
         }
         else
         {
-            Sound = false;
+            Sound = false;           
             UpdateState();
         }
         
