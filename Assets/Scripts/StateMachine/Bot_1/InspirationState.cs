@@ -50,7 +50,7 @@ public class InspirationState : IState
 
         bool Sound;
 
-        if (Random.Range (0f,1f) > 0.95)
+        if (Random.Range (0f,1f) > 0.99)
   
         {
             Sound = true;
