@@ -10,10 +10,10 @@ public class SingletonAudio : MonoBehaviour
     public List<AudioClip> History;
         
     public AudioSource chirp;
-
+    
     void Awake()
     {
         History = new List<AudioClip> ();
     }
 
- }
+  }

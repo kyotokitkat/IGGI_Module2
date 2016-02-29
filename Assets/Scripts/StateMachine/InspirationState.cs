@@ -14,10 +14,11 @@ public class InspirationState : IState
 
     }
 
+ 
     public void UpdateState()
     {
         if (Input.GetKeyDown(KeyCode.P))
-        {
+        {            
             ToStopState();
         }
         else
