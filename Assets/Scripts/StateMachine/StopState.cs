@@ -17,14 +17,15 @@ public class StopState : IState
     {
         
             paused = togglePause();
-  
+             
+          
     }
-  
-    //also interaction with other bots? conflicts?
 
+  
     public void ToInspirationState()
     {
 
+        
         bot.currentState = bot.inspirationState;
         Debug.Log("going to inspiration state");
     }
