@@ -13,13 +13,20 @@ public class InspirationState : IState
 		bot = statePattern;
 
     }
+    public GameObject bird;
+    public GameObject[] birds;
 
- 
+
     public void UpdateState()
     {
+        birds = GameObject.FindGameObjectsWithTag("bird");
+
         if (Input.GetKeyDown(KeyCode.P))
-        {            
-            ToStopState();
+        {
+            foreach (GameObject bird in birds)
+            {
+                ToStopState();
+            }
         }
         else
         {
@@ -47,29 +54,30 @@ public class InspirationState : IState
     
     private void Think()
     {
-
         bool Sound;
 
-        if (Random.Range (0f,1f) > 0.99)
-  
+        if (Random.Range(0f, 1f) > 0.99)
+
         {
             Sound = true;
             if (Sound == true)
             {
-                
-                bot.clip = (bot.manager.Clips[Random.Range(0, bot.manager.Clips.Length)]);                
-                bot.manager.chirp.PlayOneShot(bot.clip);
-                              
-      
-            }          
+                foreach (GameObject bird in birds)
+                {
+                    bot.clip = (bot.manager.Clips[Random.Range(0, bot.manager.Clips.Length)]);
+                    bot.manager.chirp.PlayOneShot(bot.clip);
+                }
+
+            }
             ToComposingState();
-            
+
         }
-            else
+        else
         {
             Sound = false;
             UpdateState();
-        } 
+        }
+        
               
     }
 

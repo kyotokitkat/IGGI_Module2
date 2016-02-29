@@ -11,13 +11,13 @@ public class StopState : IState
         bot = statePattern;
     }
 
+    
     bool paused = false;
 
     public void UpdateState()
     {
-        
-            paused = togglePause();
-             
+              
+            paused = togglePause();      
           
     }
 
@@ -42,7 +42,8 @@ public class StopState : IState
 
     bool togglePause()
     {
-        if (Time.timeScale == 0f)
+
+            if (Time.timeScale == 0f)
         {
             Time.timeScale = 1f;
             return (false);

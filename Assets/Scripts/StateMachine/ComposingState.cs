@@ -11,12 +11,13 @@ public class ComposingState : IState
         bot = statePattern;
     }
 
-   
     public void UpdateState()
     {
+       
         if (Input.GetKeyDown(KeyCode.P))
         {
-            ToStopState();
+            
+                ToStopState();
             
         }
         else
